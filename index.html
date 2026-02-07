@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 600px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px gray;
+            text-align: center;
+            position: relative;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            position: relative;
+            height: 120px;
+        }
+
+        /* Adjacent pill buttons */
+        #yesBtn {
+            padding: 18px 55px;
+            font-size: 22px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        #noBtn {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: gray;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            position: absolute;
+            left: 150px;
+            top: 0;
+            transition: 0.1s ease;
+        }
+        
+
+        .disclaimer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: gray;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 12px;
+        }
+
+        /* Celebration page hidden initially */
+        #celebrationPage {
+            display: none;
+            text-align: center;
+        }
+
+        #celebrationPage h1 {
+            font-size: 50px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="mainPage">
+
+    <!-- Romantic Sticker -->
+    <img src="https://i.pinimg.com/originals/c0/f8/2b/c0f82bef91c9aff9b20868749915d11f.gif" alt="Romantic Gif">
+
+    <h1>Will You Be My Valentine? ❤️</h1>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="sayYes()">Yes 💖</button>
+        <button id="noBtn">No 😢</button>
+    </div>
+
+    <div class="disclaimer">
+        *Disclaimer: The "No" button seems to be a bit shy 🙈
+    </div>
+
+</div>
+
+<!-- Celebration Page -->
+<div class="container" id="celebrationPage">
+
+    <!-- Romantic Sticker -->
+    <img src="https://i.pinimg.com/originals/c0/f8/2b/c0f82bef91c9aff9b20868749915d11f.gif" alt="Romantic Gif">
+    <h2>Will You Be My Valentine? ❤️</h2>
+    <h1>YAYYYY!!! 💕</h1>
+
+    <!-- Celebration GIF -->
+    <img src="https://media.tenor.com/0Sh7u1lRsyEAAAAM/wedding-crasher-hro.gif" alt="Celebration Gif"  style="width: 400px; margin-top: 20px;">
+    
+</div>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", function() {
+        const container = document.querySelector(".container");
+        const containerRect = container.getBoundingClientRect();
+
+        const maxX = containerRect.width - 100;
+        const maxY = 80;
+
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        noBtn.style.left = randomX + "px";
+        noBtn.style.top = randomY + "px";
+    });
+
+    function sayYes() {
+        document.getElementById("mainPage").style.display = "none";
+        document.getElementById("celebrationPage").style.display = "block";
+    }
+</script>
+
+</body>
+</html>

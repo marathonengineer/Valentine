@@ -3,6 +3,8 @@
 <head>
     <title>Be My Valentine ❤️</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -25,10 +27,19 @@
             position: relative;
         }
 
+        img {
+            width: 220px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
         .buttons {
             margin-top: 30px;
             position: relative;
-            height: 140px;
+            height: 160px;
         }
 
         #yesBtn {
@@ -42,8 +53,8 @@
         }
 
         #noBtn {
-            padding: 12px 25px;
-            font-size: 16px;
+            padding: 14px 30px;
+            font-size: 18px;
             background-color: gray;
             color: white;
             border: none;
@@ -61,11 +72,6 @@
             color: gray;
         }
 
-        img {
-            width: 200px;
-            border-radius: 12px;
-        }
-
         #celebrationPage {
             display: none;
         }
@@ -73,6 +79,44 @@
         #celebrationPage h1 {
             font-size: 50px;
             color: red;
+        }
+
+        /* 📱 MOBILE OPTIMIZATION */
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            img {
+                width: 260px;
+            }
+
+            .buttons {
+                height: 220px;
+            }
+
+            #yesBtn {
+                padding: 20px 60px;
+                font-size: 24px;
+            }
+
+            #noBtn {
+                padding: 18px 35px;
+                font-size: 20px;
+            }
+
+            #celebrationPage h1 {
+                font-size: 38px;
+            }
         }
     </style>
 </head>
@@ -106,7 +150,7 @@
     <h2>Will You Be My Valentine? ❤️</h2>
     <h1>YAYYYY!!! 💕</h1>
 
-    <img src="https://media.tenor.com/0Sh7u1lRsyEAAAAM/wedding-crasher-hro.gif" 
+    <img src="https://media.tenor.com/0Sh7u1lRsyEAAAAM/wedding-crasher-hro.gif"
          style="width: 100%; max-width: 400px; margin-top: 20px;">
 </div>
 
